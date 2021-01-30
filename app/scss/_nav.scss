@@ -1,0 +1,170 @@
+
+
+header {
+
+    margin:auto;
+    
+    .overlay {
+
+        background-image: linear-gradient(hsl(233, 26%, 24%),transparent);
+        position: fixed;
+        top:5rem;
+        left:0px;
+        right: 0px;
+        bottom:0px;
+        visibility: hidden;
+        opacity:0;
+        z-index: 3;
+
+
+        
+      
+        
+    
+        .linkList{
+            
+            z-index:3;
+            align-items: center;
+            margin:1.56rem 1.25rem;
+            
+            
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+    
+            a{
+                display: block;
+                text-align: center;
+                padding:17.5px;
+                text-decoration: none;
+                color:black;
+            }
+    
+           
+    
+            
+    
+        }
+        
+       
+    
+    
+    }
+
+    
+
+.navi {
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    height: 5rem;
+    @include breakpoint-up(large){
+        
+        margin:0 auto;
+        max-width: 69.375rem;
+
+
+    }
+    
+
+
+    &__logo{
+        margin-bottom:0;
+        padding-bottom:0;
+        height:20px;
+    }
+
+    
+
+    &__links{
+
+        a{
+            color: hsl(233, 8%, 62%);
+            text-decoration: none;
+            margin-right:2rem;
+            position: relative;
+            transition: color 200ms ease-in-out;
+            &:last-child{
+                margin-right:0px;
+            }
+        }
+
+        
+
+        a::before {
+            content: "";
+            display: inline-block;
+            width:100%;
+            top:240%;
+            left:0;
+            right:0;
+            opacity:0;
+            position: absolute;
+            transition: opacity 200ms ease-in-out;
+            height:3px;
+            background:linear-gradient(to right,hsl(136, 65%, 51%) 0%,hsl(192, 70%, 51%) 100%);
+        }
+
+        a:hover {
+            color:black;
+            
+        }
+        a:hover:before{
+            opacity: 1;
+        }
+
+
+    }
+
+    
+
+    &__hamburger{
+
+        
+        cursor: pointer;
+        
+        
+        
+        
+        span{
+            display: block;
+            height:2px;
+            background-color: black;
+            width:1.625rem;
+            transition: all 200ms ease-in-out;
+            transform-origin: 3px 1px;
+
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+
+            
+        }
+
+        &.open {
+
+            
+
+            span:first-child{
+                
+                transform: rotateZ(45deg);
+               
+            }
+
+            span:nth-child(2){
+                opacity: 0;
+            }
+
+            span:last-child{
+                transform: rotateZ(-45deg);
+            
+            }
+            
+        }
+    }
+
+    
+};
+
+
+}

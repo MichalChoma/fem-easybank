@@ -1,0 +1,132 @@
+.footer {
+    background-color: hsl(233, 26%, 24%);
+    text-align: center;
+
+    
+
+    .container{
+        @include breakpoint-up(large){
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 2fr;
+            grid-template-rows: 1fr auto;
+
+            grid-template-areas:
+            "col1 col2 col3 col4"
+            "social col2 col3 col4";
+
+            justify-self: end;
+            gap: 0px 30px;
+
+    
+            
+        }
+    
+
+    .col1{
+        grid-area: col1;
+        justify-self: start;
+
+       
+    }
+
+    
+
+    &__imgg{
+            
+            @include breakpoint-down(large){
+            margin-bottom: 1.5625rem;
+            }
+
+            @include breakpoint-up(large){
+                margin-top:1.25rem;
+            }
+    }
+
+    &__social{
+        @include breakpoint-up(medium){
+        margin-bottom: 0.75rem;
+        }
+
+        @include breakpoint-up(large){
+        grid-area: social;
+         margin-top: 1.8rem;
+         justify-self: start;
+        }
+
+    .socials:not(:last-child){
+        margin-right: 0.75rem;
+    }
+    
+    }
+    .col2{
+        grid-area: col2;
+        
+    }
+    .col3{
+        grid-area: col3;
+        
+    }
+    &__links{
+
+        @include breakpoint-up(large){
+            text-align: left;
+
+
+            
+        }
+
+
+        
+
+        
+        a{
+            margin-top: 1.25rem;
+            display: block;
+            text-decoration: none;
+            color:hsl(0, 0%, 98%);
+            font-weight: 300;
+            font-size: 1rem;
+            transition: color 150ms ease-in-out;
+
+            &:hover{
+                color:hsl(136, 65%, 51%);
+            }
+        }
+    }
+    .col4{
+        grid-area: col4;
+        justify-items: end;
+        
+    }
+
+
+    &__cta{
+
+        @include breakpoint-up(large){
+            text-align: right;
+            justify-items: end;
+        }
+        .button{
+            margin-top:1.875rem;
+
+            @include breakpoint-up(large){
+                margin-top:1rem;
+            }
+        }
+
+        .copyright{
+            color:hsl(233, 8%, 62%);
+            margin-top:1.875rem;
+
+            @include breakpoint-up(large){
+                margin-top:2.2rem;
+            }
+
+        
+        }
+    }
+
+        
+    
+}
+}

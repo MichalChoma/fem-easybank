@@ -1,0 +1,144 @@
+.articles{
+
+    background-color: hsl(0, 0%, 98%);
+    
+    .container{
+
+        h3{
+            margin-top:5.3125rem;
+            text-align: center;
+            margin-bottom:2.1875rem;
+            font-weight: 300;
+            font-size: 1.875rem;
+    
+            @include breakpoint-up(large){
+                text-align: left;
+                margin-top:5.9375rem;
+            }
+        }
+    
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap:1.875rem;
+
+            @include breakpoint-up(medium){
+                grid-template-columns: repeat(2,1fr);
+            }
+               
+                   @include breakpoint-up(large){
+                       
+                       grid-template-columns: repeat(4,1fr);
+                   }
+
+                   
+
+                   
+               
+                
+           
+                
+             
+    
+
+    
+
+
+    
+    }
+
+    .article{
+
+        margin-top:2.1875rem;
+        margin-right: auto;
+        margin-bottom:0px;
+        margin-left:auto;
+        cursor: pointer;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: white;
+        text-align: center;
+        transition: all 200ms ease-in-out;
+        box-shadow:0px 3px 12px rgba(0,0,0,0.15);
+
+
+
+
+        &:hover{
+            transform: scale(1.05);
+        }
+        
+        
+        
+        @include breakpoint-up(large){
+            margin-bottom:5rem;
+        }
+        
+        
+        
+           
+            
+            
+            
+            
+        &__foto{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height:11.25rem;
+            
+
+            @include breakpoint-up(large){
+
+                height:12.5rem;
+                max-width: 15.625rem;
+                
+            }
+        }
+      
+
+        &__texts{
+            margin-left:1.875rem;
+            margin-right:1.875rem;
+            text-align: left;
+
+            .author{
+                margin-top:1.875rem;
+                margin-bottom: 0,9375rem;
+                color:hsl(233, 8%, 62%);
+                font-size:0.625rem;
+
+            }
+
+            .header{
+
+                font-weight: 400;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+                margin-top:0px;
+
+
+            }
+
+            .text{
+                color:hsl(233, 8%, 62%);
+                font-size:0.75rem;
+                line-height: 1.3;
+                
+
+            }
+
+
+
+        }
+
+
+    }
+}
+}
+
+
+
+
+
+

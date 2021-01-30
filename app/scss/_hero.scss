@@ -1,0 +1,133 @@
+.hero {
+
+    .container{
+    @include breakpoint-up(large){
+        
+        display: flex;
+        align-items: center;
+        
+    }
+    }
+    &__images{
+        background-image: url('/images/bg-intro-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 17.5rem;
+        position: relative;
+
+
+        @include breakpoint-up(medium){
+            min-height: 25rem;
+            background-position:center 60%;
+        }
+
+        @include breakpoint-up(large){
+            background-image: none;
+            flex:3;
+            order:2;
+            height: 100%;
+            width: 100%;
+            min-height: 41rem;
+            background-position:left center;
+        }
+
+        &::after{
+            background-image: url('/images/image-mockups.png');
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            width: 100%;
+            height: 100%;
+            background-size: 93%;
+            position: absolute;
+            margin:auto;
+            
+            @include breakpoint-up(large){
+                width:120%;
+                height:122%;
+                background-size: 94%;
+                background-position: center 150%;
+                left:22%;
+            }
+            
+
+        }
+
+        &::before{
+            @include breakpoint-up(medium){
+                background-size: 52%;
+            }
+
+            @include breakpoint-up(large){
+                background-image: url('/images/bg-intro-desktop.svg');
+                
+                content: "";
+                ;
+                background-position: center bottom;
+                
+                height: 100%;
+                
+                position: absolute;
+               
+                width: 150%;
+                background-size: 128%;
+                background-repeat: no-repeat;
+                background-position: 0% 76%;
+                
+            }
+
+            
+    }
+}
+
+
+    &__texts{
+        @include breakpoint-up(large){
+            flex:2;
+            order: 1;
+            text-align: left;
+        }
+        text-align: center;
+        
+        
+        
+
+        h1{
+
+            @include breakpoint-up(large){
+                width:24rem;
+                font-size:3.125rem ;
+            }
+            font-size: 2.31em;
+            
+            line-height: 1.2;
+            font-weight: 300;
+            
+            margin-bottom: 1.875rem;
+
+        }
+
+        .normal{
+
+            @include breakpoint-up(large){
+                width: 27rem;
+                padding:0px;
+            }
+            color:hsl(233, 8%, 62%);
+            font-weight: 300;
+            font-size:1rem;
+            line-height: 1.3;
+            margin-bottom:1.875rem;
+            padding:0px;
+
+            
+            
+        }
+
+        .button{
+            margin-bottom: 5.3125rem;
+        }
+
+    }
+}
